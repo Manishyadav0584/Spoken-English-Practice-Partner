@@ -390,5 +390,16 @@ with gr.Blocks(
 
 
 if __name__ == "__main__":
-    demo.launch(server_name="127.0.0.1", server_port=7860)
+    import imageio_ffmpeg
+
+    os.environ["PATH"] = (
+        os.path.dirname(imageio_ffmpeg.get_ffmpeg_exe())
+        + os.pathsep
+        + os.environ["PATH"]
+    )
+
+    demo.launch(
+        server_name="0.0.0.0",
+        server_port=int(os.environ.get("PORT", 10000))
+    )
 
