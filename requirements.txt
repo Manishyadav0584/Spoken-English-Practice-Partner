@@ -1,0 +1,10 @@
+gradio==5.9.1
+torch
+transformers>=4.40,<5
+gTTS
+matplotlib
+numpy
+requests
+jiwer
+pillow
+soundfile

@@ -1,0 +1,5 @@
+# only for generate_scenes.py (run once on Colab GPU / locally)
+torch
+diffusers
+transformers
+accelerate
